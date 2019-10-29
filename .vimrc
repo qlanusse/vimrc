@@ -28,6 +28,9 @@ Plugin 'mattn/emmet-vim'
 " Python indentation
 Plugin 'Vimjas/vim-python-pep8-indent'
 
+" Haskell indentation
+Plugin 'neovimhaskell/haskell-vim'
+
 " All Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -51,9 +54,9 @@ set modeline
 set shiftround  " Round indent to multiple of 'shiftwidth'
 set smartindent " Do smart indenting when starting a new line
 set autoindent  " Copy indent from current line, over to the new line
-au FileType yaml,yml,css sl ts=2 sts=2 sw=2 et
-au FileType htm,html,htmldjango sl ts=4 sts=4 sw=4 et
-au FileType c sl ts=2 sts=2 sw=2 et
+ "" Filetype configs
+au FileType yaml,yml,css,haskell,c set ts=2 sts=2 sw=2 expandtab
+au FileType htm,html,htmldjango set ts=4 sts=4 sw=4 expandtab
 
 " Status line configuration
 let g:airline_theme='luna'
